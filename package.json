@@ -1,0 +1,33 @@
+{
+  "name": "my-babel-set01",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "babel src -d lib",
+    "buildn": "babel node_modules/react-dom -d libnode",
+    "buildb": "./node_modules/.bin/browserify node_modules -o bundle2.js",
+    "buildm": "./node_modules/.bin/browserify -t [ babelify --presets [ @babel/preset-react ] ] ./main.mjs -p esmify --extension=mjs -o bundlem.js",
+    "buildm2": "browserify ./main2.js -o bundlem2.js -t reactify -t babelify -p esmify",
+    "buildm1": "browserify ./main.js -o bundlem1.js -t reactify -t babelify -p esmify"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.0",
+    "@babel/eslint-parser": "^7.25.9",
+    "@babel/plugin-transform-modules-commonjs": "^7.26.3",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "babel-eslint": "^10.1.0",
+    "babelify": "^10.0.0",
+    "brfs": "^2.0.2",
+    "eslint": "^9.16.0",
+    "esmify": "^2.1.1",
+    "reactify": "^1.1.1"
+  },
+  "dependencies": {
+    "browserify": "^17.0.1",
+    "module": "^1.2.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
