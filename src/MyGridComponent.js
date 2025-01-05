@@ -3,8 +3,8 @@ import React from 'react';
 export default function MyGridComponent({content}) {
 	return (
 		<div className="wrapper">
-		<div className="wrapperElement">{content}</div>
-		<div className="wrapperElement">E2</div>
+		<div className="wrapperElement">{content[0]}</div>
+		<div className="wrapperElement">{content[1]}</div>
 		<div className="wrapperElement">E3</div>
 		<div className="wrapperElement">E4</div>
 		<div className="wrapperElement">E5</div>
