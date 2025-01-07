@@ -6,6 +6,7 @@ console.log('inside main.js script here');
 import DiceRoll from './src/diceroll.js';
 import MyGridComponent from './src/MyGridComponent.js';
 import MyGridEfficient from './src/MyGridEfficient.js';
+import MyRestExpt from './src/MyRestExpt.js';
 const container2 = document.getElementById('dice_roll_root');
 const root2 = createRoot(container2);
 let theContent="Somewhere";
@@ -18,5 +19,6 @@ root2.render(
 	<DiceRoll />
 	<MyGridComponent content={theContentArray}/>
 	<MyGridEfficient content={theContentArray2}/>
+	<MyRestExpt />
 	</div>
 );
