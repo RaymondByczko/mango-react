@@ -20,3 +20,11 @@ body {
 	border-width: 3px;
 	border-color: blue;
 }
+
+.restresponse {
+	border: solid;
+	border-width: 5px;;
+	border-color: red;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
