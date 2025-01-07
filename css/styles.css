@@ -1,0 +1,22 @@
+body {
+  background-color: powderblue;
+}
+
+.wrapper {
+	border: solid;
+	border-width: 5px;
+	border-color: green;
+	border-radius: 8px;
+	margin-top: 1em;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	row-gap: 1em;
+	column-gap: 2em;
+}
+
+.wrapperElement {
+	row-gap: 1em;
+	border: solid;
+	border-width: 3px;
+	border-color: blue;
+}
