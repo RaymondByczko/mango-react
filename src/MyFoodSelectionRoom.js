@@ -4,8 +4,10 @@ import axios from 'axios';
 
 export default function MyFoodSelectionRoom ({mealSelectionId}) {
   const [mealChoice, setMealChoice] = useState(null);
+  console.log('MyFoodSelectionRoom');
+  let effectiveMealId = null;
   useEffect(() => {
-  	if (mealSelectionId != 1) || (mealSelectionId != 2) {
+  	if ((mealSelectionId != 1) || (mealSelectionId != 2)) {
   		effectiveMealId = 0;
   	}
   	else {
@@ -25,7 +27,7 @@ export default function MyFoodSelectionRoom ({mealSelectionId}) {
     		// always executed
   		});
     return () => {
-      setMealChoice(null);
+      setMealChoice('DefaultMeal');
     };
   }, [mealSelectionId]);
   return (

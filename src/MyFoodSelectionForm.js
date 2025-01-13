@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
 import React from 'react';
 import axios from 'axios';
-import MyFoodSelectionRoom from './MyFoodSelectionForm.js';
+import MyFoodSelectionRoom from './MyFoodSelectionRoom.js';
 export default function MyFoodSelectionForm({idFoodSelectionForm}) {
 	const [choice, setChoice] = useState(null);
 	function handleOnChange() {
 		console.log('MyFoodSelectionForm:handleOnChange');
-		let choice = document.getElementById(idFoodSelectionForm).value;
-		console.log(`choice: ${choice}`);
+		let tmpChoice = document.getElementById(idFoodSelectionForm).value;
+		console.log(`tmpChoice: ${tmpChoice}`);
+		setChoice(tmpChoice);
 	}
 	return (
 		<div>
