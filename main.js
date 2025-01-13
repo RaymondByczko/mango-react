@@ -8,6 +8,7 @@ import MyGridComponent from './src/MyGridComponent.js';
 import MyGridEfficient from './src/MyGridEfficient.js';
 import MyRestExpt from './src/MyRestExpt.js';
 import GrandMaComponent from './src/GrandMaComponent.js';
+import MyFoodSelectionForm from './src/MyFoodSelectionForm.js';
 const container2 = document.getElementById('dice_roll_root');
 const root2 = createRoot(container2);
 let theContent="Somewhere";
@@ -22,5 +23,6 @@ root2.render(
 	<MyGridEfficient content={theContentArray2}/>
 	<MyRestExpt />
 	<GrandMaComponent />
+	<MyFoodSelectionForm idFoodSelectionForm="id_food" />
 	</div>
 );
