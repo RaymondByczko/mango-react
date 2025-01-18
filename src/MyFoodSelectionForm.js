@@ -1,3 +1,10 @@
+/*
+Provides a html select for a meal choice.  The choices are at a high level.
+The actual food stuffs in each choice are not considered at this level
+of React component.  Only MealChoice1 and MealChoice2.  These are 'hard coded'.
+These are provided by Axios Rest, in a related React component, namely
+MyFoodSelectionFormRest.js .
+*/
 import { useState, useEffect } from 'react';
 import React from 'react';
 import axios from 'axios';
