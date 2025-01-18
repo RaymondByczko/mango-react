@@ -5,15 +5,17 @@ import axios from 'axios';
 export default function MyFoodSelectionRoom ({mealSelectionId}) {
   const [mealChoice, setMealChoice] = useState(null);
   console.log('MyFoodSelectionRoom');
+  console.log(`mealSelectionId=${mealSelectionId}`);
   let effectiveMealId = null;
   useEffect(() => {
-  	if ((mealSelectionId != 1) || (mealSelectionId != 2)) {
+  	if ((mealSelectionId != "1") && (mealSelectionId != "2")) {
   		effectiveMealId = 0;
   	}
   	else {
   		effectiveMealId = mealSelectionId;
   	}
-  	axios.get("/json{effectiveMealId}.php")
+    console.log(`effectiveMealId=${effectiveMealId}`);
+  	axios.get(`/json${effectiveMealId}.php`)
 		.then(function (response) {
     		// handle success
     		console.log(response);
@@ -27,10 +29,10 @@ export default function MyFoodSelectionRoom ({mealSelectionId}) {
     		// always executed
   		});
     return () => {
-      setMealChoice('DefaultMeal');
+      // setMealChoice('DefaultMeal');
     };
   }, [mealSelectionId]);
   return (
-  	<div>{mealChoice}</div>
+  	<div>{JSON.stringify(mealChoice)}</div>
   	)
 }
