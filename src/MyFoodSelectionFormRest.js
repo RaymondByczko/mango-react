@@ -44,6 +44,29 @@ export default function MyFoodSelectionFormRest({idFoodSelectionForm}) {
 
 //   }, [idFoodSelectionForm, selections, choice]);
 
+  	if (selections != null) {
+  		console.log('selections: not null');
+  		console.log(`... selections: ${selections}`);
+  		console.log(`... selections(JS): ${JSON.stringify(selections)}`);
+  		console.log(`... keys: ${Object.keys(selections)}`);
+
+  		// selections.forEach( (value, key, map)=>{
+  		//	console.log(`value=${value}, key=${key}`);
+  		// });
+  		// let arraySelections = Array.from(selections);
+  		// let arraySelections = Array.from(JSON.stringify(selections));
+  		// let arraySelections = Array.from(JSON.parse(selections));
+  		// arraySelections.forEach( (value, key, map)=>{
+  		// 	console.log(`value=${value}, key=${key}`);
+  		// });
+  		//
+		Object.keys(selections).forEach((key) => {
+  			console.log("...key=", key, ", selections[]=", selections[key]);
+		});
+  	}
+  	else {
+  		console.log('selections:null');
+  	}
   	const innerSelectArray = [];
   	innerSelectArray.push(<option key={1001} value="1">MealChoice1</option>);
   	innerSelectArray.push(<option key={1002} value="2">MealChoice2</option>);
