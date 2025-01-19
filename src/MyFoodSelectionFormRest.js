@@ -41,15 +41,20 @@ export default function MyFoodSelectionFormRest({idFoodSelectionForm}) {
     };
   }, [mealSelectionId]);
 
+  	const innerSelectArray = [];
+  	innerSelectArray.push(<option value="1">MealChoice1</option>);
+  	innerSelectArray.push(<option value="2">MealChoice2</option>);
 
+  	const outerSelectArray = [];
+  	outerSelectArray.push(<select id={idFoodSelectionForm} onChange={handleOnChange}>{innerSelectArray}</select>);
+
+	const outerFoodSelectionRoomArray = [];
+	outerFoodSelectionRoomArray.push(<MyFoodSelectionRoom mealSelectionId={choice}/></div>);
+
+	let outerArray = [];
+	outerArray.push(<div key={201} className='wrapper'>{outerSelectArray}{outerFoodSelectionRoomArray}</div>);
 
 	return (
-		<div>
-		<select id={idFoodSelectionForm} onChange={handleOnChange}>
-			<option value="1">MealChoice1</option>
-  			<option value="2">MealChoice2</option>
-		</select>
-		<MyFoodSelectionRoom mealSelectionId={choice}/>
-		</div>
+		<div>{outerArray}</div>
 	)
 }
