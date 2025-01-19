@@ -27,6 +27,7 @@ export default function MyFoodSelectionFormRest({idFoodSelectionForm}) {
 		.then(function (response) {
     		// handle success
     		console.log(response);
+    		console.log(`MyFoodSelectionFormRest-jsonmeal-response.data=${JSON.stringify(response.data)}`);
     		setSelections(response.data);
   		})
   		.catch(function (error) {
@@ -39,22 +40,24 @@ export default function MyFoodSelectionFormRest({idFoodSelectionForm}) {
     return () => {
 
     };
-  }, [mealSelectionId]);
+   }, [idFoodSelectionForm]);
+
+//   }, [idFoodSelectionForm, selections, choice]);
 
   	const innerSelectArray = [];
-  	innerSelectArray.push(<option value="1">MealChoice1</option>);
-  	innerSelectArray.push(<option value="2">MealChoice2</option>);
+  	innerSelectArray.push(<option key={1001} value="1">MealChoice1</option>);
+  	innerSelectArray.push(<option key={1002} value="2">MealChoice2</option>);
 
   	const outerSelectArray = [];
-  	outerSelectArray.push(<select id={idFoodSelectionForm} onChange={handleOnChange}>{innerSelectArray}</select>);
+  	outerSelectArray.push(<select key={1003} id={idFoodSelectionForm} onChange={handleOnChange}>{innerSelectArray}</select>);
 
 	const outerFoodSelectionRoomArray = [];
-	outerFoodSelectionRoomArray.push(<MyFoodSelectionRoom mealSelectionId={choice}/></div>);
+	outerFoodSelectionRoomArray.push(<MyFoodSelectionRoom key={1005} mealSelectionId={choice}/>);
 
 	let outerArray = [];
-	outerArray.push(<div key={201} className='wrapper'>{outerSelectArray}{outerFoodSelectionRoomArray}</div>);
+	outerArray.push(<div key={1004} className='wrapper'>{outerSelectArray}{outerFoodSelectionRoomArray}</div>);
 
 	return (
-		<div>{outerArray}</div>
+		<div className="foodselectionrest">{outerArray}</div>
 	)
 }

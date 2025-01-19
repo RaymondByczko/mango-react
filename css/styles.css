@@ -38,3 +38,15 @@ body {
 	padding-top: 1em;
 	padding-bottom: 1em;
 }
+
+.foodselectionrest {
+	border: solid;
+	border-color: black;
+	border-width: 10px;
+	border-radius: 10px;
+	padding-left: 3em;
+	padding-right: 3em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin-top: 2em;
+}
