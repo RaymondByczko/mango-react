@@ -68,9 +68,15 @@ export default function MyFoodSelectionFormRest({idFoodSelectionForm}) {
   		console.log('selections:null');
   	}
   	const innerSelectArray = [];
-  	innerSelectArray.push(<option key={1001} value="1">MealChoice1</option>);
-  	innerSelectArray.push(<option key={1002} value="2">MealChoice2</option>);
-
+  	if (0==1){
+  		innerSelectArray.push(<option key={1001} value="1">MealChoice1</option>);
+  		innerSelectArray.push(<option key={1002} value="2">MealChoice2</option>);
+	} else if (selections != null) {
+		Object.keys(selections).forEach((key) => {
+  			console.log("...key=", key, ", selections[]=", selections[key]);
+			innerSelectArray.push(<option key={1000+key} value={key}>{selections[key]}</option>);
+		});
+	}
   	const outerSelectArray = [];
   	outerSelectArray.push(<select key={1003} id={idFoodSelectionForm} onChange={handleOnChange}>{innerSelectArray}</select>);
 
