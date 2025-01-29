@@ -50,3 +50,15 @@ body {
 	padding-bottom: 1em;
 	margin-top: 2em;
 }
+
+.commandclass {
+	border: solid;
+	border-color: green;
+	border-width: 4px;
+	border-radius: 10px;
+	padding-left: 3em;
+	padding-right: 3em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin-top: 2em;
+}

@@ -10,6 +10,7 @@ import MyRestExpt from './src/MyRestExpt.js';
 import GrandMaComponent from './src/GrandMaComponent.js';
 import MyFoodSelectionForm from './src/MyFoodSelectionForm.js';
 import MyFoodSelectionFormRest from './src/MyFoodSelectionFormRest.js';
+import MyCommandPalette from './src/MyCommandPalette.js';
 const container2 = document.getElementById('dice_roll_root');
 const root2 = createRoot(container2);
 let theContent="Somewhere";
@@ -26,5 +27,8 @@ root2.render(
 	<GrandMaComponent />
 	<MyFoodSelectionForm idFoodSelectionForm="id_food" />
 	<MyFoodSelectionFormRest idFoodSelectionForm="id_food_rest" />
+	<div class="commandclass">
+		<MyCommandPalette />
+	</div>
 	</div>
 );
